@@ -3,14 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://bknhocr6hlnpc" path="res://player.tscn" id="1_80nbo"]
 [ext_resource type="PackedScene" uid="uid://drx2ss18ja26r" path="res://3dScene.tscn" id="2_e2o6t"]
 
-[node name="Game" type="Node2D" unique_id=1015135033]
-position = Vector2(-2, 0)
-
-[node name="Player" parent="." unique_id=1920874682 instance=ExtResource("1_80nbo")]
-visible = false
-position = Vector2(498, 344)
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1138160482]
-zoom = Vector2(4, 4)
+[node name="Node3D" type="Node3D" unique_id=1081365637]
 
 [node name="Node3D" parent="." unique_id=1288366345 instance=ExtResource("2_e2o6t")]
+transform = Transform3D(1.0056641, 0, 0, 0, 1.0056641, 0, 0, 0, 1.0056641, -0.00041604042, -5.507469e-05, -0.00058460236)
+
+[node name="Player2" parent="." unique_id=1890724467 instance=ExtResource("1_80nbo")]
+transform = Transform3D(1.4338706, 0, 0, 0, 3.5081632, 0, 0, 0, 1.4916823, 0, 0, 0)

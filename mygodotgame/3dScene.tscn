@@ -3,6 +3,7 @@
 [ext_resource type="ArrayMesh" uid="uid://bspsvfi0h3nm8" path="res://Models/3D Models/Kitchen_TableV1.obj" id="1_wk40s"]
 [ext_resource type="ArrayMesh" uid="uid://wdtnfuu01vft" path="res://Models/3D Models/Kitchen_TableV2.obj" id="1_ymyh4"]
 [ext_resource type="ArrayMesh" uid="uid://bunqsx8cfbj5u" path="res://Models/3D Models/Kitchen_TableV5.obj" id="3_i7fgw"]
+[ext_resource type="ArrayMesh" uid="uid://dswjt5jbar4jp" path="res://Models/3D Models/Table.obj" id="4_ckdsl"]
 [ext_resource type="ArrayMesh" uid="uid://ds8bfrhxdu7p" path="res://Models/3D Models/Kitchen_TableV3.obj" id="4_i7fgw"]
 [ext_resource type="ArrayMesh" uid="uid://d3tt7qjr3fvn1" path="res://Models/3D Models/Fridge.obj" id="4_kedpp"]
 [ext_resource type="ArrayMesh" uid="uid://qocp8cc8cuto" path="res://Models/3D Models/Kitchen_TableV6.obj" id="6_ckdsl"]
@@ -23,11 +24,19 @@ albedo_color = Color(0.84313726, 0.5019608, 0.3764706, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rkbum"]
 albedo_color = Color(0.84313726, 0.5019608, 0.3764706, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_kedpp"]
+size = Vector3(13.212769, 0.81933594, 7.158905)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kedpp"]
 albedo_color = Color(0.8749519, 0.9439641, 0.76379526, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6l1u2"]
 albedo_color = Color(0.84313726, 0.5019608, 0.3764706, 1)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kedpp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ckdsl"]
+size = Vector3(12.28867, 2.6815186, 1.6916046)
 
 [sub_resource type="Environment" id="Environment_kedpp"]
 background_mode = 1
@@ -50,6 +59,38 @@ mesh = SubResource("BoxMesh_tnv5d")
 
 [node name="Floor2" type="MeshInstance3D" parent="." unique_id=120570455]
 transform = Transform3D(1, 0, 0, 0, 0.6209127, 0, 0, 0, 0.031097684, -0.32841468, 7.0036416, -5.9368534)
+mesh = SubResource("BoxMesh_tnv5d")
+
+[node name="Floor6" type="MeshInstance3D" parent="." unique_id=1255430102]
+transform = Transform3D(0.38226262, 0, 0, 0, 0.6209127, 0, 0, 0, 0.031097684, 0.082012475, 6.0003295, -5.9368534)
+mesh = SubResource("BoxMesh_tnv5d")
+
+[node name="Floor7" type="MeshInstance3D" parent="." unique_id=322915074]
+transform = Transform3D(0.38226262, 0, 0, 0, 0.6209127, 0, 0, 0, 0.031097684, 0.082012475, 3.033691, -5.9368534)
+mesh = SubResource("BoxMesh_tnv5d")
+
+[node name="Floor8" type="MeshInstance3D" parent="." unique_id=2133749138]
+transform = Transform3D(-1.0167078e-08, 0.6209127, 0, -0.23259564, -2.7140954e-08, 0, 0, 0, 0.031097688, -2.4390922, 4.510995, -5.9368534)
+mesh = SubResource("BoxMesh_tnv5d")
+
+[node name="Floor9" type="MeshInstance3D" parent="." unique_id=1090365437]
+transform = Transform3D(-1.0167078e-08, 0.6209127, 0, -0.23259564, -2.7140954e-08, 0, 0, 0, 0.031097688, 2.5987444, 4.510995, -5.9368534)
+mesh = SubResource("BoxMesh_tnv5d")
+
+[node name="Floor10" type="MeshInstance3D" parent="." unique_id=914891815]
+transform = Transform3D(0.38226262, 0, 0, 0, 0.6209127, 0, 0, 0, 0.031097684, 0.082012475, 6.0003295, -6.289264)
+mesh = SubResource("BoxMesh_tnv5d")
+
+[node name="Floor11" type="MeshInstance3D" parent="." unique_id=1859561227]
+transform = Transform3D(0.38226262, 0, 0, 0, 0.6209127, 0, 0, 0, 0.031097684, 0.082012475, 3.033691, -6.289264)
+mesh = SubResource("BoxMesh_tnv5d")
+
+[node name="Floor12" type="MeshInstance3D" parent="." unique_id=1096485841]
+transform = Transform3D(-1.0167078e-08, 0.6209127, 0, -0.23259564, -2.7140954e-08, 0, 0, 0, 0.031097688, -2.4390922, 4.510995, -6.289264)
+mesh = SubResource("BoxMesh_tnv5d")
+
+[node name="Floor13" type="MeshInstance3D" parent="." unique_id=2079794100]
+transform = Transform3D(-1.0167078e-08, 0.6209127, 0, -0.23259564, -2.7140954e-08, 0, 0, 0, 0.031097688, 2.5987444, 4.510995, -6.289264)
 mesh = SubResource("BoxMesh_tnv5d")
 
 [node name="Floor3" type="MeshInstance3D" parent="." unique_id=1075831348]
@@ -89,10 +130,16 @@ transform = Transform3D(0.55240893, -1.7484557e-07, 0, -4.221919e-15, -4.3711392
 material_override = SubResource("StandardMaterial3D_bqvq7")
 mesh = SubResource("BoxMesh_tnv5d")
 
-[node name="Wall5" type="MeshInstance3D" parent="." unique_id=1539871466]
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1732518206]
 transform = Transform3D(1, -1.7484555e-07, 0, -7.642742e-15, -4.371139e-08, 1, -1.7484555e-07, -1, -4.371139e-08, 5.844049e-07, 2.9354875, 4.8547063)
+
+[node name="Wall5" type="MeshInstance3D" parent="StaticBody3D2" unique_id=1539871466]
 material_override = SubResource("StandardMaterial3D_rkbum")
 mesh = SubResource("BoxMesh_tnv5d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=703713604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16107142, -0.090332985, 0.89070153)
+shape = SubResource("BoxShape3D_kedpp")
 
 [node name="Wall2" type="MeshInstance3D" parent="." unique_id=1090921465]
 transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0.0077135563, 7.3215685, 0)
@@ -124,6 +171,10 @@ mesh = ExtResource("1_wk40s")
 transform = Transform3D(1.0421898, 0, 0, 0, 1.0421898, 0, 0, 0, 1.0421898, -5.354351, -1.0471423, -4.899343)
 mesh = ExtResource("3_i7fgw")
 
+[node name="KitchenTableV8" type="MeshInstance3D" parent="." unique_id=1549018865]
+transform = Transform3D(1.0421898, 0, 0, 0, 1.0421898, 0, 0, 0, 6.513677, -5.354351, -1.0471423, 1.1419122)
+mesh = ExtResource("4_ckdsl")
+
 [node name="KitchenTableV2" type="MeshInstance3D" parent="." unique_id=1930200496]
 transform = Transform3D(1.0421898, 0, 0, 0, 1.0421898, 0, 0, 0, 1.0421898, 4.906562, -1.0471423, -4.899343)
 mesh = ExtResource("3_i7fgw")
@@ -132,9 +183,38 @@ mesh = ExtResource("3_i7fgw")
 transform = Transform3D(-4.9125568e-08, 0, -0.9671252, 0, 1.0421898, 0, 1.123862, 0, -4.2274383e-08, 4.906562, -1.0471423, -2.9665205)
 mesh = ExtResource("4_kedpp")
 
-[node name="KitchenTableV8" type="MeshInstance3D" parent="." unique_id=291883320]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1089926824]
 transform = Transform3D(-4.5555563e-08, 0, -1.0421898, 0, 1.0421898, 0, 1.0421898, 0, -4.5555563e-08, 4.906562, -1.0471423, -0.7621211)
+physics_material_override = SubResource("PhysicsMaterial_kedpp")
+
+[node name="KitchenTableV8" type="MeshInstance3D" parent="StaticBody3D" unique_id=291883320]
 mesh = ExtResource("1_wk40s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=860827787]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06060797, 1.662783, -0.047456264)
+shape = SubResource("BoxShape3D_ckdsl")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="." unique_id=1412474296]
+transform = Transform3D(1.0421898, 0, 0, 0, 1.0421898, 0, 0, 0, 1.0421898, -3.271998, -1.0471423, -4.920097)
+physics_material_override = SubResource("PhysicsMaterial_kedpp")
+
+[node name="KitchenTableV8" type="MeshInstance3D" parent="StaticBody3D4" unique_id=718787502]
+mesh = ExtResource("1_wk40s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4" unique_id=343597202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.953995, 1.662783, -0.06713867)
+shape = SubResource("BoxShape3D_ckdsl")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="." unique_id=549828551]
+transform = Transform3D(-4.5555563e-08, 0, 1.0421898, 0, 1.0421898, 0, -1.0421898, 0, -4.5555563e-08, -5.121761, -1.0471423, 3.4937062)
+physics_material_override = SubResource("PhysicsMaterial_kedpp")
+
+[node name="KitchenTableV8" type="MeshInstance3D" parent="StaticBody3D5" unique_id=1119248222]
+mesh = ExtResource("1_wk40s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D5" unique_id=1898197512]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1364002, 1.6627834, 0.023979187)
+shape = SubResource("BoxShape3D_ckdsl")
 
 [node name="KitchenTableV11" type="MeshInstance3D" parent="." unique_id=1758594624]
 transform = Transform3D(-4.5555563e-08, 0, -1.0421898, 0, 1.0421898, 0, 1.0421898, 0, -4.5555563e-08, 4.906562, 3.1634984, -0.7621211)
