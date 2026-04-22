@@ -1,12 +1,18 @@
 [gd_scene format=3 uid="uid://duvh3yc0jlmv1"]
 
 [ext_resource type="PackedScene" uid="uid://bknhocr6hlnpc" path="res://player.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://bid8bx0uiwfis" path="res://Menu.tscn" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://drx2ss18ja26r" path="res://3dScene.tscn" id="2_e2o6t"]
 
 [node name="Node3D" type="Node3D" unique_id=1081365637]
 
 [node name="Node3D" parent="." unique_id=1288366345 instance=ExtResource("2_e2o6t")]
-transform = Transform3D(1.0056641, 0, 0, 0, 1.0056641, 0, 0, 0, 1.0056641, -0.00041604042, -5.507469e-05, -0.00058460236)
+transform = Transform3D(1.0056641, 0, 0, 0, 1.0056641, 0, 0, 0, 1.0056641, -0.0025114417, -0.006978035, 0.0020998716)
 
 [node name="Player2" parent="." unique_id=1890724467 instance=ExtResource("1_80nbo")]
-transform = Transform3D(1.4338706, 0, 0, 0, 3.5081632, 0, 0, 0, 1.4916823, 0, 0, 0)
+transform = Transform3D(1.4338706, 0, 0, 0, 3.5081632, 0, 0, 0, 1.4916823, -1.1749413, 0, 3.7851784)
+
+[node name="Control" parent="." unique_id=2094378602 instance=ExtResource("1_feb5d")]
+offset_left = 144.0
+offset_right = 144.0
+scale = Vector2(2.105, 2.105)

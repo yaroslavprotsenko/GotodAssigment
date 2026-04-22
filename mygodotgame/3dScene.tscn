@@ -36,7 +36,7 @@ albedo_color = Color(0.84313726, 0.5019608, 0.3764706, 1)
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kedpp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ckdsl"]
-size = Vector3(12.28867, 2.6815186, 1.6916046)
+size = Vector3(8.61639, 2.6815186, 1.8544693)
 
 [sub_resource type="Environment" id="Environment_kedpp"]
 background_mode = 1
@@ -71,6 +71,18 @@ mesh = SubResource("BoxMesh_tnv5d")
 
 [node name="Floor8" type="MeshInstance3D" parent="." unique_id=2133749138]
 transform = Transform3D(-1.0167078e-08, 0.6209127, 0, -0.23259564, -2.7140954e-08, 0, 0, 0, 0.031097688, -2.4390922, 4.510995, -5.9368534)
+mesh = SubResource("BoxMesh_tnv5d")
+
+[node name="Floor14" type="MeshInstance3D" parent="." unique_id=77861400]
+transform = Transform3D(-2.3845988e-08, 0.6209127, 0, -0.54553264, -2.7140954e-08, 0, 0, 0, 0.031097688, -2.4525836, 1.3681486, 4.57591)
+mesh = SubResource("BoxMesh_tnv5d")
+
+[node name="Floor16" type="MeshInstance3D" parent="." unique_id=1493960213]
+transform = Transform3D(-0.193209, -5.4281905e-08, 0, 1.689087e-08, -0.6209127, 0, 0, 0, 0.031097692, -1.1455643, 5.0313663, 4.57591)
+mesh = SubResource("BoxMesh_tnv5d")
+
+[node name="Floor15" type="MeshInstance3D" parent="." unique_id=1588304652]
+transform = Transform3D(-2.3845988e-08, 0.6209127, 0, -0.54553264, -2.7140954e-08, 0, 0, 0, 0.031097688, 0.0753696, 1.3681486, 4.57591)
 mesh = SubResource("BoxMesh_tnv5d")
 
 [node name="Floor9" type="MeshInstance3D" parent="." unique_id=1090365437]
@@ -180,7 +192,7 @@ transform = Transform3D(1.0421898, 0, 0, 0, 1.0421898, 0, 0, 0, 1.0421898, 4.906
 mesh = ExtResource("3_i7fgw")
 
 [node name="KitchenTableV7" type="MeshInstance3D" parent="." unique_id=24215761]
-transform = Transform3D(-4.9125568e-08, 0, -0.9671252, 0, 1.0421898, 0, 1.123862, 0, -4.2274383e-08, 4.906562, -1.0471423, -2.9665205)
+transform = Transform3D(-4.9125568e-08, 0, -0.9671252, 0, 1.0421898, 0, 1.123862, 0, -4.2274383e-08, 5.00179, -1.0471423, -2.9665205)
 mesh = ExtResource("4_kedpp")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1089926824]
@@ -191,7 +203,7 @@ physics_material_override = SubResource("PhysicsMaterial_kedpp")
 mesh = ExtResource("1_wk40s")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=860827787]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06060797, 1.662783, -0.047456264)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8336674, 1.6996512, 0.025351048)
 shape = SubResource("BoxShape3D_ckdsl")
 
 [node name="StaticBody3D4" type="StaticBody3D" parent="." unique_id=1412474296]
@@ -202,7 +214,7 @@ physics_material_override = SubResource("PhysicsMaterial_kedpp")
 mesh = ExtResource("1_wk40s")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4" unique_id=343597202]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.953995, 1.662783, -0.06713867)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.584808, 1.6612747, 0.0087656975)
 shape = SubResource("BoxShape3D_ckdsl")
 
 [node name="StaticBody3D5" type="StaticBody3D" parent="." unique_id=549828551]
@@ -213,7 +225,18 @@ physics_material_override = SubResource("PhysicsMaterial_kedpp")
 mesh = ExtResource("1_wk40s")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D5" unique_id=1898197512]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1364002, 1.6627834, 0.023979187)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1388044, 1.6627834, 0.02398014)
+shape = SubResource("BoxShape3D_ckdsl")
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="." unique_id=1125784312]
+transform = Transform3D(-4.5555563e-08, 0, 1.0421898, 0, 1.0421898, 0, -1.0421898, 0, -4.5555563e-08, 5.235975, -1.0471423, 3.4937062)
+physics_material_override = SubResource("PhysicsMaterial_kedpp")
+
+[node name="KitchenTableV8" type="MeshInstance3D" parent="StaticBody3D6" unique_id=251607009]
+mesh = ExtResource("1_wk40s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D6" unique_id=1875622252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1388044, 1.6627834, 0.02398014)
 shape = SubResource("BoxShape3D_ckdsl")
 
 [node name="KitchenTableV11" type="MeshInstance3D" parent="." unique_id=1758594624]
