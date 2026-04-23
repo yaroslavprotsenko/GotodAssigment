@@ -13,6 +13,11 @@ transform = Transform3D(1.0056641, 0, 0, 0, 1.0056641, 0, 0, 0, 1.0056641, -0.00
 transform = Transform3D(1.4338706, 0, 0, 0, 3.5081632, 0, 0, 0, 1.4916823, -1.1749413, 0, 3.7851784)
 
 [node name="Control" parent="." unique_id=2094378602 instance=ExtResource("1_feb5d")]
-offset_left = 144.0
-offset_right = 144.0
+anchors_preset = -1
+anchor_right = 1.9690001
+anchor_bottom = 2.105
+offset_left = -133.00003
+offset_top = -36.0
+offset_right = -1249.2881
+offset_bottom = -752.04004
 scale = Vector2(2.105, 2.105)

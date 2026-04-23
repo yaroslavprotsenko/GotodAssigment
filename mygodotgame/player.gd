@@ -1,9 +1,11 @@
 extends CharacterBody3D
 
-var step_size = 2.0
-var step_time = 0.08
-var turn_time = 0.08
-var check_distance = 1.0
+@export var step_size = 2.0
+@export var step_time = 0.08
+@export var turn_time = 0.08
+@export var check_distance = 1.0
+
+@export var step_sounds: Array[AudioStream] = []
 
 var busy = false
 
@@ -49,6 +51,8 @@ func try_move(direction):
 func move_player(direction):
 	busy = true
 
+	play_random_step_sound()
+
 	var target_position = global_position + direction * step_size
 
 	var tween = create_tween()
@@ -71,6 +75,22 @@ func can_move(direction):
 		return true
 
 	return false
+
+
+func play_random_step_sound():
+	if step_sounds.is_empty():
+		return
+
+	if not has_node("StepSound"):
+		return
+
+	var step_player = $StepSound
+	var random_index = randi() % step_sounds.size()
+
+	step_player.stream = step_sounds[random_index]
+	step_player.pitch_scale = randf_range(0.96, 1.04)
+	step_player.stop()
+	step_player.play()
 
 
 func _finish_action():

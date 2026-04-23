@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b62j5gfd65dw8"
+path="res://.godot/imported/Kitchen_TableV12.obj-32aa7b5dae825958c3db21b93b9c52a1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Kitchen_TableV12.obj-32aa7b5dae825958c3db21b93b9c52a1.mesh"]
+
+source_file="res://Models/3D Models/Kitchen_TableV12.obj"
+dest_files=["res://.godot/imported/Kitchen_TableV12.obj-32aa7b5dae825958c3db21b93b9c52a1.mesh", "res://.godot/imported/Kitchen_TableV12.obj-32aa7b5dae825958c3db21b93b9c52a1.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

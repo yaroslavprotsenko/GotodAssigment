@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://bid8bx0uiwfis"]
 
 [ext_resource type="Script" uid="uid://bmo50xvwmkwoo" path="res://menu.gd" id="1_uubjt"]
+[ext_resource type="AudioStream" uid="uid://dcnekwtbj44mc" path="res://music.mp3" id="2_5yleq"]
+[ext_resource type="AudioStream" uid="uid://cmw8bbv4rddlt" path="res://pressbutton.mp3" id="3_ylpcl"]
 
 [node name="Control" type="Control" unique_id=2094378602]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -10.0
+offset_right = -10.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_uubjt")
@@ -21,10 +25,10 @@ color = Color(0.101960786, 0.09803922, 0.09803922, 1)
 
 [node name="Start" type="Panel" parent="." unique_id=900018316]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 40.0
-offset_right = 916.0
-offset_bottom = 460.0
+offset_left = 10.0
+offset_top = 82.0
+offset_right = 910.0
+offset_bottom = 502.0
 scale = Vector2(1.25, 1.25)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Start" unique_id=1111574221]
@@ -44,10 +48,10 @@ vertical_alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Start" unique_id=754207019]
 layout_mode = 0
-offset_left = -208.80003
-offset_top = 288.0
-offset_right = 691.19995
-offset_bottom = 407.0
+offset_left = -207.2
+offset_top = 203.20001
+offset_right = 692.8
+offset_bottom = 322.2
 scale = Vector2(1.375, 1.375)
 theme_override_constants/separation = 10
 
@@ -255,13 +259,32 @@ text = "Start"
 layout_mode = 2
 text = "Not today"
 
+[node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=1723204006]
+stream = ExtResource("2_5yleq")
+volume_db = -6.888
+autoplay = true
+parameters/looping = true
+
+[node name="ButtonClickSound" type="AudioStreamPlayer" parent="." unique_id=1661040047]
+stream = ExtResource("3_ylpcl")
+
+[connection signal="pressed" from="Start/VBoxContainer2/Button_Get Up" to="." method="play_click_sound"]
 [connection signal="pressed" from="Start/VBoxContainer2/Button_Get Up" to="." method="start_to_a"]
+[connection signal="pressed" from="Start/VBoxContainer2/Button_Sleep 5 more minutes" to="." method="play_click_sound"]
 [connection signal="pressed" from="Start/VBoxContainer2/Button_Sleep 5 more minutes" to="." method="start_to_b"]
+[connection signal="pressed" from="A/VBoxContainer2/Button_To go university" to="." method="play_click_sound"]
 [connection signal="pressed" from="A/VBoxContainer2/Button_To go university" to="." method="a_to_c"]
+[connection signal="pressed" from="A/VBoxContainer2/Button_To make tea" to="." method="play_click_sound"]
 [connection signal="pressed" from="A/VBoxContainer2/Button_To make tea" to="." method="a_to_c"]
+[connection signal="pressed" from="A/VBoxContainer2/Button_I honestly do not know" to="." method="play_click_sound"]
 [connection signal="pressed" from="A/VBoxContainer2/Button_I honestly do not know" to="." method="a_to_c"]
+[connection signal="pressed" from="B/VBoxContainer2/Button_Continue" to="." method="play_click_sound"]
 [connection signal="pressed" from="B/VBoxContainer2/Button_Continue" to="." method="b_to_a"]
+[connection signal="pressed" from="C/VBoxContainer2/Button_Continue" to="." method="play_click_sound"]
 [connection signal="pressed" from="C/VBoxContainer2/Button_Continue" to="." method="c_to_d"]
+[connection signal="pressed" from="D/VBoxContainer2/Button_Continue" to="." method="play_click_sound"]
 [connection signal="pressed" from="D/VBoxContainer2/Button_Continue" to="." method="d_to_e"]
+[connection signal="pressed" from="E/VBoxContainer2/Button_Start" to="." method="play_click_sound"]
 [connection signal="pressed" from="E/VBoxContainer2/Button_Start" to="." method="start_game"]
+[connection signal="pressed" from="E/VBoxContainer2/Button_Not today" to="." method="play_click_sound"]
 [connection signal="pressed" from="E/VBoxContainer2/Button_Not today" to="." method="b_to_a"]
