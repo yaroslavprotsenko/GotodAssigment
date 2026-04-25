@@ -27,6 +27,8 @@
 [ext_resource type="ArrayMesh" uid="uid://dd3xjodk25dei" path="res://Models/3D Models/wall_instruments.obj" id="25_uwymm"]
 [ext_resource type="ArrayMesh" uid="uid://dyntqscqmycno" path="res://Models/3D Models/SHelf.obj" id="26_82ank"]
 [ext_resource type="ArrayMesh" uid="uid://f7g2q7vbwf4f" path="res://Models/3D Models/kilim.obj" id="27_4lrhb"]
+[ext_resource type="ArrayMesh" uid="uid://d0gkblbl7d0b7" path="res://Models/3D Models/Chair.obj" id="28_ggnsh"]
+[ext_resource type="ArrayMesh" uid="uid://dht2n77ethnvx" path="res://Models/3D Models/salt.obj" id="29_7cl3r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4vrrh"]
 
@@ -55,7 +57,7 @@ albedo_color = Color(0.84313726, 0.5019608, 0.3764706, 1)
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kedpp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ckdsl"]
-size = Vector3(8.120162, 2.6815186, 1.8544693)
+size = Vector3(8.120162, 2.6815186, 1.8765755)
 
 [sub_resource type="Environment" id="Environment_kedpp"]
 background_mode = 1
@@ -244,11 +246,7 @@ physics_material_override = SubResource("PhysicsMaterial_kedpp")
 mesh = ExtResource("1_wk40s")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=860827787]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5056523, 1.6996512, 0.24266481)
-shape = SubResource("BoxShape3D_ckdsl")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=328808151]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5056523, 1.6996512, 0.24266481)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89968354, 1.6996512, 0.24266481)
 shape = SubResource("BoxShape3D_ckdsl")
 
 [node name="StaticBody3D4" type="StaticBody3D" parent="." unique_id=1412474296]
@@ -381,3 +379,15 @@ mesh = ExtResource("26_82ank")
 [node name="Kilim" type="MeshInstance3D" parent="." unique_id=289149522]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.0557284, 0.3081107, -0.05420494)
 mesh = ExtResource("27_4lrhb")
+
+[node name="Chair" type="MeshInstance3D" parent="." unique_id=824576924]
+transform = Transform3D(-3.7154685e-08, 0, -0.85000014, 0, 0.85000014, 0, 0.85000014, 0, -3.7154685e-08, -4.896794, -0.53632176, -0.059960365)
+mesh = ExtResource("28_ggnsh")
+
+[node name="Salt" type="MeshInstance3D" parent="." unique_id=1550374945]
+transform = Transform3D(0.31958055, 0, 0.05910384, 0, 0.325, 0, -0.05910384, 0, 0.31958055, 5.585499, 1.7110945, -0.66077185)
+mesh = ExtResource("29_7cl3r")
+
+[node name="Salt2" type="MeshInstance3D" parent="." unique_id=339093692]
+transform = Transform3D(0.32482874, 0, -0.010548662, 0, 0.32499996, 0, 0.010548662, 0, 0.32482874, 5.585499, 1.7110945, -0.08743453)
+mesh = ExtResource("29_7cl3r")
