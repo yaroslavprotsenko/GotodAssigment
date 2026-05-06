@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://djkoma7lfo61e"
+path="res://.godot/imported/Flowers1.obj-63d78414a065eceb07a190011f0ff222.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Flowers1.obj-63d78414a065eceb07a190011f0ff222.mesh"]
+
+source_file="res://Models/3D Models/Flowers1.obj"
+dest_files=["res://.godot/imported/Flowers1.obj-63d78414a065eceb07a190011f0ff222.mesh", "res://.godot/imported/Flowers1.obj-63d78414a065eceb07a190011f0ff222.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

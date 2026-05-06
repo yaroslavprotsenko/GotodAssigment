@@ -17,41 +17,40 @@ script = ExtResource("1_uubjt")
 
 [node name="Backround" type="ColorRect" parent="." unique_id=707539449]
 layout_mode = 0
-offset_left = -168.0
-offset_right = 984.0
-offset_bottom = 649.0
-scale = Vector2(1.279999, 1)
+offset_left = 9.999985
+offset_top = 2.9999998
+offset_right = 1162.0
+offset_bottom = 652.0
+scale = Vector2(0.86484766, 0.98165435)
 color = Color(0.101960786, 0.09803922, 0.09803922, 1)
 
 [node name="Start" type="Panel" parent="." unique_id=900018316]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 82.0
-offset_right = 910.0
-offset_bottom = 502.0
+offset_top = 75.0
+offset_right = 900.0
+offset_bottom = 495.0
 scale = Vector2(1.25, 1.25)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Start" unique_id=1111574221]
 layout_mode = 0
-offset_left = -179.2
-offset_top = 12.799998
-offset_right = 720.8
-offset_bottom = 432.8
+offset_left = 8.0
+offset_right = 608.0
+offset_bottom = 416.355
 scale = Vector2(1.3285179, 1.2959199)
 
 [node name="Label" type="Label" parent="Start/VBoxContainer" unique_id=1083702135]
 layout_mode = 2
 text = "My eyes are technically open.
-Mentally, I am still unconscious."
+My brain is still on the loading screen."
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Start" unique_id=754207019]
 layout_mode = 0
-offset_left = -207.2
-offset_top = 203.20001
-offset_right = 692.8
-offset_bottom = 322.2
+offset_left = 8.0
+offset_top = 187.20003
+offset_right = 588.595
+offset_bottom = 268.92502
 scale = Vector2(1.375, 1.375)
 theme_override_constants/separation = 10
 
@@ -66,174 +65,165 @@ text = "Sleep 5 more minutes"
 [node name="A" type="Panel" parent="." unique_id=1114793825]
 visible = false
 layout_mode = 0
-offset_left = 16.0
-offset_top = 40.0
-offset_right = 916.0
-offset_bottom = 460.0
+offset_top = 75.0
+offset_right = 900.0
+offset_bottom = 495.0
 scale = Vector2(1.25, 1.25)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="A" unique_id=1541938261]
 layout_mode = 0
-offset_left = -172.8
-offset_top = 12.800001
-offset_right = 727.2
-offset_bottom = 432.8
-scale = Vector2(1.3285179, 1.5096799)
+offset_left = 8.0
+offset_right = 608.0
+offset_bottom = 416.355
+scale = Vector2(1.3285179, 1.3176799)
 
 [node name="Label" type="Label" parent="A/VBoxContainer" unique_id=1051074864]
 layout_mode = 2
-text = "Why am I even getting up?"
+text = "Okay. First mission of the day: Leave the bed."
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="A" unique_id=1696043701]
 layout_mode = 0
-offset_left = -192.00002
-offset_top = 224.00003
-offset_right = 708.0
-offset_bottom = 343.00003
+offset_left = 8.0
+offset_top = 187.2
+offset_right = 588.595
+offset_bottom = 300.2
 scale = Vector2(1.375, 1.375)
 theme_override_constants/separation = 10
 
 [node name="Button_To go university" type="Button" parent="A/VBoxContainer2" unique_id=1464875132]
 layout_mode = 2
-text = "To go to university"
+text = "Sit up slowly"
 
 [node name="Button_To make tea" type="Button" parent="A/VBoxContainer2" unique_id=989539867]
 layout_mode = 2
-text = "To make tea"
+text = "Pretend this is easy"
 
 [node name="Button_I honestly do not know" type="Button" parent="A/VBoxContainer2" unique_id=1414281858]
 layout_mode = 2
-text = "I honestly do not know"
+text = "Question every life choice"
 
 [node name="B" type="Panel" parent="." unique_id=1973599491]
 visible = false
 layout_mode = 0
-offset_left = 16.0
-offset_top = 40.0
-offset_right = 916.0
-offset_bottom = 460.0
+offset_top = 75.0
+offset_right = 900.0
+offset_bottom = 495.0
 scale = Vector2(1.25, 1.25)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="B" unique_id=8178967]
 layout_mode = 0
-offset_left = -172.8
-offset_top = 12.800001
-offset_right = 727.2
-offset_bottom = 432.8
-scale = Vector2(1.3285179, 1.5096799)
+offset_left = 8.0
+offset_right = 608.0
+offset_bottom = 416.355
+scale = Vector2(1.3285179, 1.3176801)
 
 [node name="Label" type="Label" parent="B/VBoxContainer" unique_id=1111643446]
 layout_mode = 2
 text = "I slept 30 more minutes.
-Incredible. Now I am late and still tired."
+Somehow, this did not fix anything."
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="B" unique_id=1001589978]
 layout_mode = 0
-offset_left = -192.0
-offset_top = 288.0
-offset_right = 708.0
-offset_bottom = 407.0
+offset_left = 8.0
+offset_top = 187.2
+offset_right = 588.595
+offset_bottom = 300.2
 scale = Vector2(1.375, 1.375)
 theme_override_constants/separation = 10
 
 [node name="Button_Continue" type="Button" parent="B/VBoxContainer2" unique_id=88754280]
 layout_mode = 2
-text = "Continue"
+text = "Get up anyway"
 
 [node name="C" type="Panel" parent="." unique_id=1450122299]
 visible = false
 layout_mode = 0
-offset_left = 16.0
-offset_top = 40.0
-offset_right = 916.0
-offset_bottom = 460.0
+offset_top = 75.0
+offset_right = 900.0
+offset_bottom = 495.0
 scale = Vector2(1.25, 1.25)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="C" unique_id=4379069]
 layout_mode = 0
-offset_left = -172.80002
-offset_top = 12.800001
-offset_right = 727.19995
-offset_bottom = 432.8
-scale = Vector2(1.3285179, 1.5096799)
+offset_left = 8.0
+offset_right = 608.0
+offset_bottom = 416.355
+scale = Vector2(1.3285179, 1.3176799)
 
 [node name="Label" type="Label" parent="C/VBoxContainer" unique_id=2138409319]
 layout_mode = 2
-text = "Wake up. Go to class. Come home. Sleep again.
-This is either adulthood or a very boring loop."
+text = "My room is quiet.
+My body is awake.
+My motivation is missing."
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="C" unique_id=1409006467]
 layout_mode = 0
-offset_left = -192.0
-offset_top = 288.0
-offset_right = 708.0
-offset_bottom = 407.0
+offset_left = 8.0
+offset_top = 187.2
+offset_right = 588.595
+offset_bottom = 268.925
 scale = Vector2(1.375, 1.375)
 theme_override_constants/separation = 10
 
 [node name="Button_Continue" type="Button" parent="C/VBoxContainer2" unique_id=78175256]
 layout_mode = 2
-text = "Continue"
+text = "Look for motivation"
 
 [node name="D" type="Panel" parent="." unique_id=17042461]
 visible = false
 layout_mode = 0
-offset_left = 16.0
-offset_top = 40.0
-offset_right = 916.0
-offset_bottom = 460.0
+offset_top = 75.0
+offset_right = 900.0
+offset_bottom = 495.0
 scale = Vector2(1.25, 1.25)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="D" unique_id=1263487127]
 layout_mode = 0
-offset_left = -172.80002
-offset_top = 12.800001
-offset_right = 727.19995
-offset_bottom = 432.8
+offset_left = 8.0
+offset_right = 608.0
+offset_bottom = 416.355
 scale = Vector2(1.3285179, 1.5096799)
 
 [node name="Label" type="Label" parent="D/VBoxContainer" unique_id=1209982439]
 layout_mode = 2
-text = "Maybe I am in the Matrix.
-Matrix 3 was terrible, so I hope not."
+text = "No motivation found.
+But the kitchen has tea"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="D" unique_id=489001207]
 layout_mode = 0
-offset_left = -192.0
-offset_top = 288.0
-offset_right = 708.0
-offset_bottom = 407.0
+offset_left = 8.0
+offset_top = 187.2
+offset_right = 588.595
+offset_bottom = 268.925
 scale = Vector2(1.375, 1.375)
 theme_override_constants/separation = 10
 
 [node name="Button_Continue" type="Button" parent="D/VBoxContainer2" unique_id=534147485]
 layout_mode = 2
-text = "Go to the kitchen"
+text = "Head to the kitchen"
 
 [node name="E" type="Panel" parent="." unique_id=918399737]
 visible = false
 layout_mode = 0
-offset_left = 16.0
-offset_top = 40.0
-offset_right = 916.0
-offset_bottom = 460.0
+offset_top = 75.0
+offset_right = 900.0
+offset_bottom = 495.0
 scale = Vector2(1.25, 1.25)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="E" unique_id=1070940187]
 layout_mode = 0
-offset_left = -172.80002
-offset_top = 12.800001
-offset_right = 727.19995
-offset_bottom = 432.8
-scale = Vector2(1.3285179, 1.5096799)
+offset_left = 8.0
+offset_right = 608.0
+offset_bottom = 416.355
+scale = Vector2(1.3285179, 1.3176721)
 
 [node name="Label" type="Label" parent="E/VBoxContainer" unique_id=1923527455]
 layout_mode = 2
@@ -244,16 +234,16 @@ vertical_alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="E" unique_id=487447722]
 layout_mode = 0
-offset_left = -192.00002
-offset_top = 249.6
-offset_right = 708.0
-offset_bottom = 368.6
+offset_left = 8.0
+offset_top = 187.2
+offset_right = 588.595
+offset_bottom = 268.925
 scale = Vector2(1.375, 1.375)
 theme_override_constants/separation = 10
 
 [node name="Button_Start" type="Button" parent="E/VBoxContainer2" unique_id=848623191]
 layout_mode = 2
-text = "Start"
+text = "Go to the kitchen"
 
 [node name="Button_Not today" type="Button" parent="E/VBoxContainer2" unique_id=984100042]
 layout_mode = 2
@@ -268,23 +258,23 @@ parameters/looping = true
 [node name="ButtonClickSound" type="AudioStreamPlayer" parent="." unique_id=1661040047]
 stream = ExtResource("3_ylpcl")
 
-[connection signal="pressed" from="Start/VBoxContainer2/Button_Get Up" to="." method="play_click_sound"]
 [connection signal="pressed" from="Start/VBoxContainer2/Button_Get Up" to="." method="start_to_a"]
-[connection signal="pressed" from="Start/VBoxContainer2/Button_Sleep 5 more minutes" to="." method="play_click_sound"]
+[connection signal="pressed" from="Start/VBoxContainer2/Button_Get Up" to="." method="play_click_sound"]
 [connection signal="pressed" from="Start/VBoxContainer2/Button_Sleep 5 more minutes" to="." method="start_to_b"]
-[connection signal="pressed" from="A/VBoxContainer2/Button_To go university" to="." method="play_click_sound"]
+[connection signal="pressed" from="Start/VBoxContainer2/Button_Sleep 5 more minutes" to="." method="play_click_sound"]
 [connection signal="pressed" from="A/VBoxContainer2/Button_To go university" to="." method="a_to_c"]
-[connection signal="pressed" from="A/VBoxContainer2/Button_To make tea" to="." method="play_click_sound"]
+[connection signal="pressed" from="A/VBoxContainer2/Button_To go university" to="." method="play_click_sound"]
 [connection signal="pressed" from="A/VBoxContainer2/Button_To make tea" to="." method="a_to_c"]
-[connection signal="pressed" from="A/VBoxContainer2/Button_I honestly do not know" to="." method="play_click_sound"]
+[connection signal="pressed" from="A/VBoxContainer2/Button_To make tea" to="." method="play_click_sound"]
 [connection signal="pressed" from="A/VBoxContainer2/Button_I honestly do not know" to="." method="a_to_c"]
-[connection signal="pressed" from="B/VBoxContainer2/Button_Continue" to="." method="play_click_sound"]
+[connection signal="pressed" from="A/VBoxContainer2/Button_I honestly do not know" to="." method="play_click_sound"]
 [connection signal="pressed" from="B/VBoxContainer2/Button_Continue" to="." method="b_to_a"]
-[connection signal="pressed" from="C/VBoxContainer2/Button_Continue" to="." method="play_click_sound"]
+[connection signal="pressed" from="B/VBoxContainer2/Button_Continue" to="." method="play_click_sound"]
 [connection signal="pressed" from="C/VBoxContainer2/Button_Continue" to="." method="c_to_d"]
-[connection signal="pressed" from="D/VBoxContainer2/Button_Continue" to="." method="play_click_sound"]
+[connection signal="pressed" from="C/VBoxContainer2/Button_Continue" to="." method="play_click_sound"]
 [connection signal="pressed" from="D/VBoxContainer2/Button_Continue" to="." method="d_to_e"]
-[connection signal="pressed" from="E/VBoxContainer2/Button_Start" to="." method="play_click_sound"]
+[connection signal="pressed" from="D/VBoxContainer2/Button_Continue" to="." method="play_click_sound"]
 [connection signal="pressed" from="E/VBoxContainer2/Button_Start" to="." method="start_game"]
-[connection signal="pressed" from="E/VBoxContainer2/Button_Not today" to="." method="play_click_sound"]
+[connection signal="pressed" from="E/VBoxContainer2/Button_Start" to="." method="play_click_sound"]
 [connection signal="pressed" from="E/VBoxContainer2/Button_Not today" to="." method="b_to_a"]
+[connection signal="pressed" from="E/VBoxContainer2/Button_Not today" to="." method="play_click_sound"]
