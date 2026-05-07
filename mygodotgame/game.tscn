@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://bknhocr6hlnpc" path="res://player.tscn" id="1_80nbo"]
 [ext_resource type="PackedScene" uid="uid://bid8bx0uiwfis" path="res://Menu.tscn" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://drx2ss18ja26r" path="res://3dScene.tscn" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://fot816lqs0n3" path="res://phone_ui.tscn" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://c7q71mwjhkcy2" path="res://tea_mini_game.tscn" id="5_7jktm"]
 
 [node name="Node3D" type="Node3D" unique_id=1081365637]
 
@@ -21,3 +23,13 @@ offset_top = -36.0
 offset_right = -1249.2881
 offset_bottom = -752.04004
 scale = Vector2(2.105, 2.105)
+
+[node name="PhoneUI" parent="." unique_id=1721705262 instance=ExtResource("4_fc0e3")]
+offset = Vector2(60, 440)
+scale = Vector2(20.505, 20.505)
+transform = Transform2D(20.505, 0, 0, 20.505, 60, 440)
+hide_move_down = 50.0
+animation_time = 0.4
+
+[node name="TeaMiniGame" parent="." unique_id=83147994 instance=ExtResource("5_7jktm")]
+pouring_speed = 300.0

@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://c7q71mwjhkcy2"]
+
+[ext_resource type="Script" uid="uid://cerl5ehbaxhma" path="res://tea_mini_game.gd" id="1_5myd8"]
+[ext_resource type="Texture2D" uid="uid://cq8udgek0vkld" path="res://DarkOrange.png" id="2_3j653"]
+[ext_resource type="Texture2D" uid="uid://bdivw2rwjirtx" path="res://image-Photoroom (19).png" id="2_5myd8"]
+[ext_resource type="Texture2D" uid="uid://6is11cgrbjct" path="res://image-Photoroom (18).png" id="3_3j653"]
+[ext_resource type="Texture2D" uid="uid://qxj17qpsfvwt" path="res://DarkOrange-Red.png" id="3_75bkh"]
+
+[node name="TeaMiniGame" type="Node2D" unique_id=83147994]
+script = ExtResource("1_5myd8")
+pour_tilt_degrees = -45.0
+scene_after_close = "res://game.tscn"
+
+[node name="Backround" type="TextureRect" parent="." unique_id=1981950397]
+offset_left = 3.0
+offset_top = 854.0
+offset_right = 1923.0
+offset_bottom = 1079.0
+texture = ExtResource("2_3j653")
+
+[node name="Backround2" type="TextureRect" parent="." unique_id=573653148]
+offset_top = -187.0
+offset_right = 1920.0
+offset_bottom = 38.0
+scale = Vector2(1, 4.640005)
+texture = ExtResource("3_75bkh")
+
+[node name="KettleImage" type="Sprite2D" parent="." unique_id=2060124627]
+position = Vector2(360, 250)
+scale = Vector2(1.01, 0.9)
+texture = ExtResource("3_3j653")
+
+[node name="WaterParent" type="Node2D" parent="." unique_id=284214350]
+position = Vector2(20, 185)
+
+[node name="CupImage" type="Sprite2D" parent="." unique_id=833477648]
+position = Vector2(842.00006, 757)
+scale = Vector2(0.575, 0.575)
+texture = ExtResource("2_5myd8")
+
+[node name="CupPercentLabel" type="Label" parent="." unique_id=2044480491]
+offset_left = 773.0
+offset_top = 928.0
+offset_right = 849.0
+offset_bottom = 948.0
+scale = Vector2(3, 3)
+text = "Water: 30"
+
+[node name="KettlePercentLabel" type="Label" parent="." unique_id=805993324]
+offset_left = 773.0
+offset_top = 21.26
+offset_right = 849.0
+offset_bottom = 41.260002
+scale = Vector2(3, 3)
+text = "Water: 30"

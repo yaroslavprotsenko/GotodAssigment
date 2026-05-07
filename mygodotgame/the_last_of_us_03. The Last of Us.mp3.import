@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://wsx8ho4keucm"
+path="res://.godot/imported/the_last_of_us_03. The Last of Us.mp3-bab690b074eccad127dcfeabab86522a.mp3str"
+
+[deps]
+
+source_file="res://the_last_of_us_03. The Last of Us.mp3"
+dest_files=["res://.godot/imported/the_last_of_us_03. The Last of Us.mp3-bab690b074eccad127dcfeabab86522a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

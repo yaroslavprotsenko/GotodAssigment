@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://difxtgbaraifq"]
+
+[ext_resource type="FontFile" uid="uid://b0o1jf1lc22wb" path="res://Inter/static/Inter_18pt-Bold.ttf" id="1_ttu11"]
+
+[resource]
+default_font = ExtResource("1_ttu11")
+default_font_size = 16

@@ -34,8 +34,9 @@ scale = Vector2(1.25, 1.25)
 [node name="VBoxContainer" type="VBoxContainer" parent="Start" unique_id=1111574221]
 layout_mode = 0
 offset_left = 8.0
+offset_top = 24.0
 offset_right = 608.0
-offset_bottom = 416.355
+offset_bottom = 440.355
 scale = Vector2(1.3285179, 1.2959199)
 
 [node name="Label" type="Label" parent="Start/VBoxContainer" unique_id=1083702135]
@@ -47,10 +48,10 @@ vertical_alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Start" unique_id=754207019]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 187.20003
-offset_right = 588.595
-offset_bottom = 268.92502
+offset_left = 6.4
+offset_top = 200.0
+offset_right = 586.995
+offset_bottom = 281.72498
 scale = Vector2(1.375, 1.375)
 theme_override_constants/separation = 10
 
@@ -73,8 +74,9 @@ scale = Vector2(1.25, 1.25)
 [node name="VBoxContainer" type="VBoxContainer" parent="A" unique_id=1541938261]
 layout_mode = 0
 offset_left = 8.0
+offset_top = 24.0
 offset_right = 608.0
-offset_bottom = 416.355
+offset_bottom = 440.355
 scale = Vector2(1.3285179, 1.3176799)
 
 [node name="Label" type="Label" parent="A/VBoxContainer" unique_id=1051074864]
@@ -86,9 +88,9 @@ vertical_alignment = 1
 [node name="VBoxContainer2" type="VBoxContainer" parent="A" unique_id=1696043701]
 layout_mode = 0
 offset_left = 8.0
-offset_top = 187.2
+offset_top = 180.0
 offset_right = 588.595
-offset_bottom = 300.2
+offset_bottom = 293.0
 scale = Vector2(1.375, 1.375)
 theme_override_constants/separation = 10
 
@@ -115,8 +117,9 @@ scale = Vector2(1.25, 1.25)
 [node name="VBoxContainer" type="VBoxContainer" parent="B" unique_id=8178967]
 layout_mode = 0
 offset_left = 8.0
+offset_top = 24.0
 offset_right = 608.0
-offset_bottom = 416.355
+offset_bottom = 440.355
 scale = Vector2(1.3285179, 1.3176801)
 
 [node name="Label" type="Label" parent="B/VBoxContainer" unique_id=1111643446]
@@ -129,9 +132,9 @@ vertical_alignment = 1
 [node name="VBoxContainer2" type="VBoxContainer" parent="B" unique_id=1001589978]
 layout_mode = 0
 offset_left = 8.0
-offset_top = 187.2
+offset_top = 220.0
 offset_right = 588.595
-offset_bottom = 300.2
+offset_bottom = 333.0
 scale = Vector2(1.375, 1.375)
 theme_override_constants/separation = 10
 
@@ -150,8 +153,9 @@ scale = Vector2(1.25, 1.25)
 [node name="VBoxContainer" type="VBoxContainer" parent="C" unique_id=4379069]
 layout_mode = 0
 offset_left = 8.0
+offset_top = 24.0
 offset_right = 608.0
-offset_bottom = 416.355
+offset_bottom = 440.355
 scale = Vector2(1.3285179, 1.3176799)
 
 [node name="Label" type="Label" parent="C/VBoxContainer" unique_id=2138409319]
@@ -165,9 +169,9 @@ vertical_alignment = 1
 [node name="VBoxContainer2" type="VBoxContainer" parent="C" unique_id=1409006467]
 layout_mode = 0
 offset_left = 8.0
-offset_top = 187.2
+offset_top = 220.0
 offset_right = 588.595
-offset_bottom = 268.925
+offset_bottom = 301.72498
 scale = Vector2(1.375, 1.375)
 theme_override_constants/separation = 10
 
@@ -186,8 +190,9 @@ scale = Vector2(1.25, 1.25)
 [node name="VBoxContainer" type="VBoxContainer" parent="D" unique_id=1263487127]
 layout_mode = 0
 offset_left = 8.0
+offset_top = 24.0
 offset_right = 608.0
-offset_bottom = 416.355
+offset_bottom = 440.355
 scale = Vector2(1.3285179, 1.5096799)
 
 [node name="Label" type="Label" parent="D/VBoxContainer" unique_id=1209982439]
@@ -200,9 +205,9 @@ vertical_alignment = 1
 [node name="VBoxContainer2" type="VBoxContainer" parent="D" unique_id=489001207]
 layout_mode = 0
 offset_left = 8.0
-offset_top = 187.2
+offset_top = 220.0
 offset_right = 588.595
-offset_bottom = 268.925
+offset_bottom = 301.72498
 scale = Vector2(1.375, 1.375)
 theme_override_constants/separation = 10
 
@@ -221,8 +226,9 @@ scale = Vector2(1.25, 1.25)
 [node name="VBoxContainer" type="VBoxContainer" parent="E" unique_id=1070940187]
 layout_mode = 0
 offset_left = 8.0
+offset_top = 24.0
 offset_right = 608.0
-offset_bottom = 416.355
+offset_bottom = 440.355
 scale = Vector2(1.3285179, 1.3176721)
 
 [node name="Label" type="Label" parent="E/VBoxContainer" unique_id=1923527455]
@@ -234,10 +240,10 @@ vertical_alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="E" unique_id=487447722]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 187.2
-offset_right = 588.595
-offset_bottom = 268.925
+offset_left = 8.8
+offset_top = 200.00003
+offset_right = 589.39496
+offset_bottom = 281.725
 scale = Vector2(1.375, 1.375)
 theme_override_constants/separation = 10
 

@@ -29,6 +29,7 @@
 [ext_resource type="ArrayMesh" uid="uid://f7g2q7vbwf4f" path="res://Models/3D Models/kilim.obj" id="27_4lrhb"]
 [ext_resource type="ArrayMesh" uid="uid://d0gkblbl7d0b7" path="res://Models/3D Models/Chair.obj" id="28_ggnsh"]
 [ext_resource type="ArrayMesh" uid="uid://dht2n77ethnvx" path="res://Models/3D Models/salt.obj" id="29_7cl3r"]
+[ext_resource type="Script" uid="uid://c6yvn18n0s3wv" path="res://SteamDeckHover.gd" id="30_b2mbx"]
 [ext_resource type="ArrayMesh" uid="uid://y8tp7eqh7bqi" path="res://Models/3D Models/SteamDeck.obj" id="30_bchcd"]
 [ext_resource type="ArrayMesh" uid="uid://bf2ywe78i5v8v" path="res://Models/3D Models/CHARK.obj" id="31_s6ryr"]
 [ext_resource type="ArrayMesh" uid="uid://b2naq4jp67bgo" path="res://Models/3D Models/GHARK.obj" id="32_to6uy"]
@@ -43,6 +44,7 @@
 [ext_resource type="ArrayMesh" uid="uid://lokql0gcma70" path="res://Models/3D Models/Flowers.obj" id="41_fbejd"]
 [ext_resource type="ArrayMesh" uid="uid://b5sfkoulxny83" path="res://Models/3D Models/Flowers2.obj" id="42_j4bec"]
 [ext_resource type="ArrayMesh" uid="uid://c0csqjbat3j4o" path="res://Models/3D Models/Art.obj" id="43_fbejd"]
+[ext_resource type="Texture2D" uid="uid://btiutmnobeelp" path="res://RightClick.png" id="45_b2mbx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4vrrh"]
 
@@ -77,6 +79,9 @@ albedo_color = Color(0.8749519, 0.9439641, 0.76379526, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6l1u2"]
 albedo_color = Color(0.84313726, 0.5019608, 0.3764706, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_fkcd1"]
+size = Vector3(7.3429184, 1.7825928, 1.4222412)
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kedpp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ckdsl"]
@@ -94,6 +99,27 @@ tonemap_exposure = 0.9
 tonemap_white = 1.85
 glow_enabled = true
 glow_intensity = 1.25
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_li844"]
+size = Vector3(1.3139648, 0.82177734, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fbejd"]
+size = Vector3(1.215, 1.575, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6h55m"]
+size = Vector3(10.390747, 2.0821533, 5.84375)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8bl0l"]
+size = Vector3(10.5789795, 1.3349609, 7.0078125)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cj85d"]
+size = Vector3(6.447632, 5.6000366, 5.7280273)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b2mbx"]
+size = Vector3(7.023712, 1, 10.085846)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q0rd7"]
+size = Vector3(0.5574951, 1.7642212, 1.5913086)
 
 [node name="Node3D" type="Node3D" unique_id=1288366345]
 script = ExtResource("1_2xpdx")
@@ -280,9 +306,15 @@ mesh = ExtResource("1_ymyh4")
 transform = Transform3D(1.0421898, 0, 0, 0, 1.0421898, 0, 0, 0, 1.0421898, 0.82888925, -1.0471423, -4.899343)
 mesh = ExtResource("1_wk40s")
 
-[node name="KitchenTableV4" type="MeshInstance3D" parent="." unique_id=948319185]
+[node name="StaticBody3D8" type="StaticBody3D" parent="." unique_id=1993384892]
 transform = Transform3D(1.0421898, 0, 0, 0, 1.0421898, 0, 0, 0, 1.0421898, -1.2214183, -1.0471423, -4.899343)
+
+[node name="KitchenTableV4" type="MeshInstance3D" parent="StaticBody3D8" unique_id=948319185]
 mesh = ExtResource("1_ymyh4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D8" unique_id=733032295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9398472, 2.1155586, 0.2111206)
+shape = SubResource("BoxShape3D_fkcd1")
 
 [node name="KitchenTableV14" type="MeshInstance3D" parent="." unique_id=243126983]
 transform = Transform3D(0.70124304, 0, 0, 0, 0.8570216, 0, 0, 0, 0.6970964, -4.9728155, -1.3994948, -3.1763613)
@@ -399,9 +431,19 @@ mesh = ExtResource("14_e4l38")
 transform = Transform3D(-0.9363478, 0, 0.35107356, 0, 1, 0, -0.35107356, 0, -0.9363478, -2.2550626, 2.0822973, -5.2957625)
 mesh = ExtResource("16_4ttdh")
 
-[node name="Draw" type="MeshInstance3D" parent="." unique_id=1905398601]
+[node name="StaticBody3D12" type="StaticBody3D" parent="." unique_id=822497272 node_paths=PackedStringArray("right_mouse_image", "bottom_text_object")]
 transform = Transform3D(-9.185406e-08, 1, 0, -2.101376, -4.371139e-08, 0, 0, 0, 2.3612173, -6.406304, 4.698725, -0.034256577)
+script = ExtResource("30_b2mbx")
+right_mouse_image = NodePath("../UI/TextureRect")
+bottom_text_object = NodePath("../UI/Painting")
+
+[node name="Draw" type="MeshInstance3D" parent="StaticBody3D12" unique_id=1905398601]
+transform = Transform3D(1, -1.7763568e-15, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = ExtResource("17_8whed")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D12" unique_id=1627614790]
+transform = Transform3D(1, -8.881784e-15, 0, 0, 1, 0, 0, 0, 1, 0.048095226, -0.08911133, 0)
+shape = SubResource("BoxShape3D_li844")
 
 [node name="Micro" type="MeshInstance3D" parent="." unique_id=1983747555]
 transform = Transform3D(0.63397664, 0, -0.49608347, 0, 0.80499995, 0, 0.49608347, 0, 0.63397664, 3.297755, 1.2905564, -4.7166243)
@@ -448,7 +490,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.0
 mesh = ExtResource("27_4lrhb")
 
 [node name="Chair" type="MeshInstance3D" parent="." unique_id=824576924]
-transform = Transform3D(0.20034653, 0, -0.8260518, 0, 0.85000026, 0, 0.8260518, 0, 0.20034653, -4.7000217, -0.53632176, -0.059960365)
+transform = Transform3D(0.20034653, 0, -0.8260518, 0, 0.85000026, 0, 0.8260518, 0, 0.20034653, -4.755792, -0.53632176, -0.059960365)
 mesh = ExtResource("28_ggnsh")
 
 [node name="Salt" type="MeshInstance3D" parent="." unique_id=1550374945]
@@ -463,29 +505,89 @@ mesh = ExtResource("29_7cl3r")
 transform = Transform3D(0.31913653, 0, -0.061456013, 0, 0.32499993, 0, 0.061456013, 0, 0.31913653, 5.585499, 1.7110945, 4.1038375)
 mesh = ExtResource("29_7cl3r")
 
-[node name="SteamDeck" type="MeshInstance3D" parent="." unique_id=1245395575]
+[node name="StaticBody3D3" type="StaticBody3D" parent="." unique_id=167705422 node_paths=PackedStringArray("right_mouse_image", "bottom_text_object")]
 transform = Transform3D(0.12853765, 0, 0.019444074, 0, 0.13, 0, -0.019444074, 0, 0.12853765, -5.052033, 2.0831194, 4.1534715)
+script = ExtResource("30_b2mbx")
+right_mouse_image = NodePath("../UI/TextureRect")
+bottom_text_object = NodePath("../UI/SteamDeck")
+
+[node name="SteamDeck" type="MeshInstance3D" parent="StaticBody3D3" unique_id=1245395575]
+transform = Transform3D(0.99999994, 0, -1.4901161e-08, 0, 1, 0, 1.4901161e-08, 0, 0.99999994, 0, 0, 0)
 mesh = ExtResource("30_bchcd")
 
-[node name="Chark" type="MeshInstance3D" parent="." unique_id=670510624]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3" unique_id=346022388]
+transform = Transform3D(5.494999, 0, -8.940697e-08, 0, 1, 0, 1.7881393e-07, 0, 3.3519995, 0.82326126, 1.344368, 0.12453461)
+shape = SubResource("BoxShape3D_fbejd")
+
+[node name="StaticBody3D7" type="StaticBody3D" parent="." unique_id=1324516246 node_paths=PackedStringArray("right_mouse_image", "bottom_text_object")]
 transform = Transform3D(-1.8128063e-09, -0.055, 2.4041384e-09, 0.0064807953, -2.6009976e-09, -0.05461684, 0.05461684, -1.5168922e-09, 0.0064807953, 4.2133317, 3.6682148, -2.4664686)
+script = ExtResource("30_b2mbx")
+right_mouse_image = NodePath("../UI/TextureRect")
+bottom_text_object = NodePath("../UI/CHARK")
+
+[node name="Chark" type="MeshInstance3D" parent="StaticBody3D7" unique_id=670510624]
+transform = Transform3D(1, 0, -7.450581e-09, 0, 1, -2.220446e-16, 7.450581e-09, -2.220446e-15, 1, 0, 0, 0)
 mesh = ExtResource("31_s6ryr")
 
-[node name="Chark2" type="MeshInstance3D" parent="." unique_id=530843683]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D7" unique_id=1125548767]
+transform = Transform3D(1, 0, -2.9802322e-08, 1.7763568e-15, 1, 4.440892e-16, 2.9802322e-08, -5.7731597e-15, 1, 0.08279419, 0.5410843, -0.059524536)
+shape = SubResource("BoxShape3D_6h55m")
+
+[node name="StaticBody3D10" type="StaticBody3D" parent="." unique_id=1517298378 node_paths=PackedStringArray("right_mouse_image", "bottom_text_object")]
 transform = Transform3D(-1.8128045e-09, -0.055, 2.4041285e-09, -0.0056220707, -2.2062316e-09, -0.054711897, 0.054711897, -2.0490578e-09, -0.0056220707, 4.2133317, 2.7039127, -2.7744133)
+script = ExtResource("30_b2mbx")
+right_mouse_image = NodePath("../UI/TextureRect")
+bottom_text_object = NodePath("../UI/GHARK")
+
+[node name="Chark2" type="MeshInstance3D" parent="StaticBody3D10" unique_id=530843683]
+transform = Transform3D(1.0000001, -3.5527137e-15, 0, 0, 1, 1.3322676e-15, 0, -4.8849813e-15, 1.0000001, 0, 0, 0)
 mesh = ExtResource("32_to6uy")
 
-[node name="Cat" type="MeshInstance3D" parent="." unique_id=1958867169]
-transform = Transform3D(0.035213824, 0, -0.077362694, 0, 0.085, 0, 0.077362694, 0, 0.035213824, 4.770098, 2.0228834, -0.7447704)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D10" unique_id=478937402]
+transform = Transform3D(1.0000004, -4.6185278e-14, 0, -1.0658141e-14, 1, 2.220446e-15, 0, -5.062617e-14, 1.0000004, -0.020587921, 0.16749573, -0.10839462)
+shape = SubResource("BoxShape3D_8bl0l")
+
+[node name="StaticBody3D11" type="StaticBody3D" parent="." unique_id=966060172 node_paths=PackedStringArray("right_mouse_image", "bottom_text_object")]
+transform = Transform3D(0.035213824, 0, -0.077362694, 0, 0.085, 0, 0.077362694, 0, 0.035213824, 4.770098, 1.9884448, -0.7447704)
+script = ExtResource("30_b2mbx")
+right_mouse_image = NodePath("../UI/TextureRect")
+bottom_text_object = NodePath("../UI/Mug")
+
+[node name="Cat" type="MeshInstance3D" parent="StaticBody3D11" unique_id=1958867169]
+transform = Transform3D(1, 0, 5.9604645e-08, 0, 0.9999998, 0, -5.9604645e-08, 0, 1, 0, 0, 0)
 mesh = ExtResource("32_yvqf1")
 
-[node name="Book" type="MeshInstance3D" parent="." unique_id=1085960135]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D11" unique_id=456959404]
+transform = Transform3D(1, 0, 5.9604645e-08, 0, 0.9999594, 0, -5.9604645e-08, 0, 1, -0.30059433, 3.507454, 1.2814941)
+shape = SubResource("BoxShape3D_cj85d")
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="." unique_id=1823471787 node_paths=PackedStringArray("right_mouse_image", "bottom_text_object")]
 transform = Transform3D(-0.08225611, 0.03527856, 0.009452858, 3.7999768e-09, 0.023293715, -0.08693333, -0.036523044, -0.0794533, -0.02128945, -4.9865527, 3.6232023, 4.427402)
+script = ExtResource("30_b2mbx")
+right_mouse_image = NodePath("../UI/TextureRect")
+bottom_text_object = NodePath("../UI/Book")
+
+[node name="Book" type="MeshInstance3D" parent="StaticBody3D6" unique_id=1085960135]
+transform = Transform3D(0.99999994, -2.9802322e-08, -7.450581e-09, 0, 0.99999994, -1.4901161e-08, 0, 0, 0.99999994, 0, 0, 0)
 mesh = ExtResource("33_e0xa8")
 
-[node name="Banana" type="MeshInstance3D" parent="." unique_id=287536347]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D6" unique_id=1874703929]
+transform = Transform3D(0.9999987, -5.9604645e-08, -8.2701445e-07, 8.046627e-07, 0.9999999, -3.5762787e-07, -2.2351742e-08, 0, 0.9999952, -1.7695293, 2.027485, 1.5428238)
+shape = SubResource("BoxShape3D_b2mbx")
+
+[node name="StaticBody3D9" type="StaticBody3D" parent="." unique_id=691068818 node_paths=PackedStringArray("right_mouse_image", "bottom_text_object")]
 transform = Transform3D(0.0036531526, -0.013633753, -0.35972318, 0.3599727, 0.0026685297, 0.0035545467, 0.0025318936, -0.359732, 0.013659796, -4.941408, 2.2648911, 2.210226)
+script = ExtResource("30_b2mbx")
+right_mouse_image = NodePath("../UI/TextureRect")
+bottom_text_object = NodePath("../UI/Banana")
+
+[node name="Banana" type="MeshInstance3D" parent="StaticBody3D9" unique_id=287536347]
+transform = Transform3D(1, 4.656613e-10, -1.2223609e-09, -4.656613e-10, 1.0000001, -3.7252903e-09, 3.783498e-10, -3.7252903e-09, 1, 0, 0, 0)
 mesh = ExtResource("34_yvqf1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D9" unique_id=774011325]
+transform = Transform3D(1, 9.313226e-10, -2.2936729e-07, -9.313226e-10, 1.0000001, -3.7252903e-09, 1.3387762e-09, -3.7252903e-09, 1, -0.22125769, 2.0164511, -0.2956581)
+shape = SubResource("BoxShape3D_q0rd7")
 
 [node name="Magnite" type="MeshInstance3D" parent="." unique_id=953209678]
 transform = Transform3D(-9.397947e-09, -0.215, 0, 0.21234359, -9.281832e-09, 0.033692706, -0.033692706, 1.4727548e-09, 0.21234359, 4.2136145, 3.8394926, -2.489732)
@@ -534,3 +636,85 @@ mesh = ExtResource("16_4ttdh")
 [node name="Art" type="MeshInstance3D" parent="." unique_id=692611191]
 transform = Transform3D(-2.2292808e-08, 0.51, -2.2292808e-08, 0, -2.2292808e-08, -0.51, -0.51, -2.2292808e-08, 9.744496e-16, -6.3077765, 4.756341, -0.19931826)
 mesh = ExtResource("43_fbejd")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1460998398]
+
+[node name="TextureRect" type="TextureRect" parent="UI" unique_id=1032653409]
+visible = false
+offset_left = 897.0
+offset_top = 500.0
+offset_right = 1409.0
+offset_bottom = 1375.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("45_b2mbx")
+
+[node name="GHARK" type="Label" parent="UI" unique_id=2047900154]
+visible = false
+offset_top = 986.0
+offset_right = 1280.0
+offset_bottom = 1029.0
+scale = Vector2(1.5, 1.5)
+text = "I clearly have some kind of obsession with similar names."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CHARK" type="Label" parent="UI" unique_id=990752348]
+visible = false
+offset_top = 986.0
+offset_right = 1280.0
+offset_bottom = 1029.0
+scale = Vector2(1.5, 1.5)
+text = "Chess 2.0. Actually, no. Just wishlist CHARK on Steam."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SteamDeck" type="Label" parent="UI" unique_id=1871325501]
+visible = false
+offset_top = 986.0
+offset_right = 1280.0
+offset_bottom = 1029.0
+scale = Vector2(1.5, 1.5)
+text = "Sorry, buddy. No time to play with you right now."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Banana" type="Label" parent="UI" unique_id=1935847028]
+visible = false
+offset_top = 986.0
+offset_right = 1280.0
+offset_bottom = 1029.0
+scale = Vector2(1.5, 1.5)
+text = "As always, no appetite in the morning."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mug" type="Label" parent="UI" unique_id=1455511867]
+visible = false
+offset_top = 986.0
+offset_right = 1280.0
+offset_bottom = 1029.0
+scale = Vector2(1.5, 1.5)
+text = "The best gift anyone has ever given me.
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Painting" type="Label" parent="UI" unique_id=700726994]
+visible = false
+offset_top = 986.0
+offset_right = 1280.0
+offset_bottom = 1029.0
+scale = Vector2(1.5, 1.5)
+text = "I feel about the same as this guy."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Book" type="Label" parent="UI" unique_id=94960519]
+visible = false
+offset_top = 986.0
+offset_right = 1280.0
+offset_bottom = 1029.0
+scale = Vector2(1.5, 1.5)
+text = "Exactly what I do not need first thing in the morning."
+horizontal_alignment = 1
+vertical_alignment = 1

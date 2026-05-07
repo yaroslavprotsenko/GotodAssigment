@@ -1,0 +1,310 @@
+[gd_scene format=3 uid="uid://fot816lqs0n3"]
+
+[ext_resource type="Script" uid="uid://b7clye56dvg4i" path="res://phone_ui.gd" id="1_b1cpo"]
+[ext_resource type="Texture2D" uid="uid://c8gmacenn338c" path="res://Phone.png" id="1_s8j8e"]
+[ext_resource type="Texture2D" uid="uid://dkh3b1k1chelk" path="res://Silient Hill.png" id="2_1hd08"]
+[ext_resource type="AudioStream" uid="uid://cjvoknor3ataa" path="res://silent_hill_2_Akira Yamaoka - Promise.mp3" id="2_ulwjg"]
+[ext_resource type="Texture2D" uid="uid://b67oplrmo72a4" path="res://pause-512.png" id="3_djuk7"]
+[ext_resource type="Texture2D" uid="uid://dr13pcgiqe5u2" path="res://download (2).png" id="3_plqq2"]
+[ext_resource type="AudioStream" uid="uid://wsx8ho4keucm" path="res://the_last_of_us_03. The Last of Us.mp3" id="3_ulwjg"]
+[ext_resource type="Texture2D" uid="uid://wjpim4wr0iuy" path="res://play-512.png" id="4_b1cpo"]
+[ext_resource type="AudioStream" uid="uid://wxj642omwltd" path="res://53. Silksong.mp3" id="4_im0xb"]
+[ext_resource type="Texture2D" uid="uid://d0rj0q6uorp6y" path="res://download (3).png" id="8_mbpcl"]
+[ext_resource type="Texture2D" uid="uid://ckr550yjh6sbv" path="res://download (4).png" id="10_djuk7"]
+
+[node name="PhoneUI" type="CanvasLayer" unique_id=1721705262 node_paths=PackedStringArray("song_screens")]
+script = ExtResource("1_b1cpo")
+play_icon = ExtResource("4_b1cpo")
+pause_icon = ExtResource("3_djuk7")
+song_screens = [NodePath("PhoneRoot/PhoneImage/Song_01"), NodePath("PhoneRoot/PhoneImage/Song_02"), NodePath("PhoneRoot/PhoneImage/Song_03")]
+song_tracks = Array[AudioStream]([ExtResource("2_ulwjg"), ExtResource("3_ulwjg"), ExtResource("4_im0xb")])
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=310187263]
+stream = ExtResource("2_ulwjg")
+
+[node name="PhoneRoot" type="Control" parent="." unique_id=1091978423]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PhoneImage" type="TextureRect" parent="PhoneRoot" unique_id=420301941]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 29.0
+texture = ExtResource("1_s8j8e")
+
+[node name="Song_01" type="Control" parent="PhoneRoot/PhoneImage" unique_id=1657767130]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CoverImage" type="TextureRect" parent="PhoneRoot/PhoneImage/Song_01" unique_id=968534741]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 503.0
+offset_bottom = 505.0
+scale = Vector2(0.019, 0.019)
+texture = ExtResource("2_1hd08")
+
+[node name="SongName" type="Label" parent="PhoneRoot/PhoneImage/Song_01" unique_id=973507363]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 14.999999
+offset_right = 67.0
+offset_bottom = 35.000008
+scale = Vector2(0.051, 0.052)
+text = "Promise"
+
+[node name="Autorname" type="Label" parent="PhoneRoot/PhoneImage/Song_01" unique_id=1536997449]
+modulate = Color(0.606085, 0.60608506, 0.606085, 1)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 16.0
+offset_right = 131.0
+offset_bottom = 36.000008
+scale = Vector2(0.031, 0.032)
+text = "Akira YAMAOKA"
+
+[node name="CurrentTimeLabel" type="Label" parent="PhoneRoot/PhoneImage/Song_01" unique_id=2086168572]
+modulate = Color(0.606085, 0.60608506, 0.606085, 1)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 18.0
+offset_right = 131.0
+offset_bottom = 38.000008
+scale = Vector2(0.031, 0.032)
+text = "1:55"
+
+[node name="TotalTimeLabel" type="Label" parent="PhoneRoot/PhoneImage/Song_01" unique_id=2101382813]
+modulate = Color(0.606085, 0.60608506, 0.606085, 1)
+layout_mode = 0
+offset_left = 11.0
+offset_top = 18.0
+offset_right = 57.29
+offset_bottom = 38.0
+scale = Vector2(0.031, 0.032)
+text = "1:55"
+
+[node name="SeekSlider" type="HSlider" parent="PhoneRoot/PhoneImage/Song_01" unique_id=293577469]
+layout_mode = 0
+offset_left = 2.9999998
+offset_top = 17.0
+offset_right = 211.0
+offset_bottom = 33.0
+scale = Vector2(0.045, 0.045)
+step = 0.01
+scrollable = false
+
+[node name="PreviousButton" type="TextureButton" parent="PhoneRoot/PhoneImage/Song_01" unique_id=230307675]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 20.048
+offset_right = 515.0
+offset_bottom = 532.048
+scale = Vector2(0.004, 0.004)
+texture_normal = ExtResource("3_plqq2")
+
+[node name="NextButton" type="TextureButton" parent="PhoneRoot/PhoneImage/Song_01" unique_id=1470989892]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 22.048
+offset_right = 525.0
+offset_bottom = 534.048
+rotation = 3.1415927
+scale = Vector2(0.004, 0.004)
+texture_normal = ExtResource("3_plqq2")
+
+[node name="PlayButton" type="TextureButton" parent="PhoneRoot/PhoneImage/Song_01" unique_id=635612035]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 20.048
+offset_right = 519.0
+offset_bottom = 532.048
+scale = Vector2(0.004, 0.004)
+texture_normal = ExtResource("4_b1cpo")
+
+[node name="Song_02" type="Control" parent="PhoneRoot/PhoneImage" unique_id=2107950465]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CoverImage" type="TextureRect" parent="PhoneRoot/PhoneImage/Song_02" unique_id=1990736940]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 643.0
+offset_bottom = 641.0
+scale = Vector2(0.015, 0.015)
+texture = ExtResource("8_mbpcl")
+
+[node name="SongName" type="Label" parent="PhoneRoot/PhoneImage/Song_02" unique_id=841685575]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 14.999999
+offset_right = 67.0
+offset_bottom = 35.000008
+scale = Vector2(0.051, 0.052)
+text = "The Last Of Us"
+
+[node name="Autorname" type="Label" parent="PhoneRoot/PhoneImage/Song_02" unique_id=60723437]
+modulate = Color(0.606085, 0.60608506, 0.606085, 1)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 16.0
+offset_right = 131.0
+offset_bottom = 36.000008
+scale = Vector2(0.031, 0.032)
+text = "Gustavo Santaolalla"
+
+[node name="CurrentTimeLabel" type="Label" parent="PhoneRoot/PhoneImage/Song_02" unique_id=971076570]
+modulate = Color(0.606085, 0.60608506, 0.606085, 1)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 18.0
+offset_right = 131.0
+offset_bottom = 38.000008
+scale = Vector2(0.031, 0.032)
+text = "1:55"
+
+[node name="TotalTimeLabel" type="Label" parent="PhoneRoot/PhoneImage/Song_02" unique_id=863536790]
+modulate = Color(0.606085, 0.60608506, 0.606085, 1)
+layout_mode = 0
+offset_left = 11.0
+offset_top = 18.0
+offset_right = 57.29
+offset_bottom = 38.0
+scale = Vector2(0.031, 0.032)
+text = "1:55"
+
+[node name="SeekSlider" type="HSlider" parent="PhoneRoot/PhoneImage/Song_02" unique_id=818073242]
+layout_mode = 0
+offset_left = 2.9999998
+offset_top = 17.0
+offset_right = 211.0
+offset_bottom = 33.0
+scale = Vector2(0.045, 0.045)
+step = 0.01
+scrollable = false
+
+[node name="PreviousButton" type="TextureButton" parent="PhoneRoot/PhoneImage/Song_02" unique_id=1423401434]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 20.048
+offset_right = 515.0
+offset_bottom = 532.048
+scale = Vector2(0.004, 0.004)
+texture_normal = ExtResource("3_plqq2")
+
+[node name="NextButton" type="TextureButton" parent="PhoneRoot/PhoneImage/Song_02" unique_id=396405342]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 22.048
+offset_right = 525.0
+offset_bottom = 534.048
+rotation = 3.1415927
+scale = Vector2(0.004, 0.004)
+texture_normal = ExtResource("3_plqq2")
+
+[node name="PlayButton" type="TextureButton" parent="PhoneRoot/PhoneImage/Song_02" unique_id=799413634]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 20.048
+offset_right = 519.0
+offset_bottom = 532.048
+scale = Vector2(0.004, 0.004)
+texture_normal = ExtResource("4_b1cpo")
+
+[node name="Song_03" type="Control" parent="PhoneRoot/PhoneImage" unique_id=1856241947]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CoverImage" type="TextureRect" parent="PhoneRoot/PhoneImage/Song_03" unique_id=2079667775]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 503.0
+offset_bottom = 505.0
+scale = Vector2(0.008, 0.008)
+texture = ExtResource("10_djuk7")
+
+[node name="SongName" type="Label" parent="PhoneRoot/PhoneImage/Song_03" unique_id=1074185589]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 14.999999
+offset_right = 67.0
+offset_bottom = 35.000008
+scale = Vector2(0.051, 0.052)
+text = "Silksong "
+
+[node name="Autorname" type="Label" parent="PhoneRoot/PhoneImage/Song_03" unique_id=457842350]
+modulate = Color(0.606085, 0.60608506, 0.606085, 1)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 16.0
+offset_right = 131.0
+offset_bottom = 36.000008
+scale = Vector2(0.031, 0.032)
+text = "Christopher Larkin"
+
+[node name="CurrentTimeLabel" type="Label" parent="PhoneRoot/PhoneImage/Song_03" unique_id=499001721]
+modulate = Color(0.606085, 0.60608506, 0.606085, 1)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 18.0
+offset_right = 131.0
+offset_bottom = 38.000008
+scale = Vector2(0.031, 0.032)
+text = "1:55"
+
+[node name="TotalTimeLabel" type="Label" parent="PhoneRoot/PhoneImage/Song_03" unique_id=1788950023]
+modulate = Color(0.606085, 0.60608506, 0.606085, 1)
+layout_mode = 0
+offset_left = 11.0
+offset_top = 18.0
+offset_right = 57.29
+offset_bottom = 38.0
+scale = Vector2(0.031, 0.032)
+text = "1:55"
+
+[node name="SeekSlider" type="HSlider" parent="PhoneRoot/PhoneImage/Song_03" unique_id=654492150]
+layout_mode = 0
+offset_left = 2.9999998
+offset_top = 17.0
+offset_right = 211.0
+offset_bottom = 33.0
+scale = Vector2(0.045, 0.045)
+step = 0.01
+scrollable = false
+
+[node name="PreviousButton" type="TextureButton" parent="PhoneRoot/PhoneImage/Song_03" unique_id=1426069277]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 20.048
+offset_right = 515.0
+offset_bottom = 532.048
+scale = Vector2(0.004, 0.004)
+texture_normal = ExtResource("3_plqq2")
+
+[node name="NextButton" type="TextureButton" parent="PhoneRoot/PhoneImage/Song_03" unique_id=1405961052]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 22.048
+offset_right = 525.0
+offset_bottom = 534.048
+rotation = 3.1415927
+scale = Vector2(0.004, 0.004)
+texture_normal = ExtResource("3_plqq2")
+
+[node name="PlayButton" type="TextureButton" parent="PhoneRoot/PhoneImage/Song_03" unique_id=2062762004]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 20.048
+offset_right = 519.0
+offset_bottom = 532.048
+scale = Vector2(0.004, 0.004)
+texture_normal = ExtResource("4_b1cpo")

@@ -30,7 +30,6 @@ func _unhandled_input(event):
 func turn_player(angle_degrees):
 	busy = true
 
-	var start_rotation = rotation
 	var end_rotation = rotation
 	end_rotation.y += deg_to_rad(angle_degrees)
 

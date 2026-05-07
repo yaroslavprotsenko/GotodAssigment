@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjvoknor3ataa"
+path="res://.godot/imported/silent_hill_2_Akira Yamaoka - Promise.mp3-55306b1e38f510eb6e907a2f59bed8f6.mp3str"
+
+[deps]
+
+source_file="res://silent_hill_2_Akira Yamaoka - Promise.mp3"
+dest_files=["res://.godot/imported/silent_hill_2_Akira Yamaoka - Promise.mp3-55306b1e38f510eb6e907a2f59bed8f6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

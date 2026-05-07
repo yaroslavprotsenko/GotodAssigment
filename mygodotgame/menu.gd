@@ -7,35 +7,42 @@ func _ready():
 	$D.hide()
 	$E.hide()
 
+
 func start_to_a():
 	play_click_sound()
 	$Start.hide()
 	$A.show()
+
 
 func start_to_b():
 	play_click_sound()
 	$Start.hide()
 	$B.show()
 
+
 func b_to_a():
 	play_click_sound()
 	$B.hide()
 	$A.show()
+
 
 func a_to_c():
 	play_click_sound()
 	$A.hide()
 	$C.show()
 
+
 func c_to_d():
 	play_click_sound()
 	$C.hide()
 	$D.show()
 
+
 func d_to_e():
 	play_click_sound()
 	$D.hide()
 	$E.show()
+
 
 func start_game():
 	play_click_sound()
@@ -48,14 +55,15 @@ func start_game():
 
 	await tween.finished
 
-	var kitchen_music = get_parent().get_node("Node3D/KitchenMusic")
-	kitchen_music.volume_db = -20.0
-	kitchen_music.play()
+	var phone_ui = get_tree().current_scene.get_node_or_null("PhoneUI")
 
-	var music_tween = create_tween()
-	music_tween.tween_property(kitchen_music, "volume_db", -3.0, 1.5)
+	if phone_ui != null:
+		phone_ui.enable_phone()
+	else:
+		print("PhoneUI not found in game scene.")
 
 	queue_free()
+
 
 func play_click_sound():
 	$ButtonClickSound.stop()
