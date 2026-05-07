@@ -1,3 +1,6 @@
+itch - https://protzz.itch.io/asigment
+password: 1234
+
 # My Little Morning
 
 Student Name: Yaroslav Protsenko
