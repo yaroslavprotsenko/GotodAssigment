@@ -21,8 +21,12 @@ extends Node2D
 
 @export var cup_size := Vector2(130, 90)
 
-@export var close_delay := 1.2
-@export var scene_after_close := ""
+@export var intro_fade_time := 0.6
+@export var result_fade_time := 0.5
+@export var result_show_time := 3.0
+
+@export var win_text := "This tea was perfect. I am ready for a great day."
+@export var lose_text := "The day starts on a bad note. As always, it will probably be terrible."
 
 @onready var kettle: Sprite2D = $KettleImage
 @onready var cup: Sprite2D = $CupImage
@@ -31,8 +35,13 @@ extends Node2D
 @onready var kettle_percent_label: Label = $KettlePercentLabel
 @onready var cup_percent_label: Label = $CupPercentLabel
 
+@onready var black_screen: ColorRect = $UI/BlackScreen
+@onready var result_label: Label = $UI/ResultLabel
+
 var direction := 1.0
 var spawn_timer := 0.0
+
+var game_started := false
 var is_finished := false
 
 var kettle_water := 0.0
@@ -45,10 +54,29 @@ func _ready() -> void:
 	kettle_water = kettle_start_water
 	cup_water = 0.0
 
+	result_label.visible = false
+
+	black_screen.visible = true
+	black_screen.modulate.a = 1.0
+
 	update_ui()
+	start_intro()
+
+
+func start_intro() -> void:
+	var tween = create_tween()
+	tween.tween_property(black_screen, "modulate:a", 0.0, intro_fade_time)
+
+	await tween.finished
+
+	black_screen.visible = false
+	game_started = true
 
 
 func _process(delta: float) -> void:
+	if game_started == false:
+		return
+
 	if is_finished:
 		update_drops(delta)
 		return
@@ -181,13 +209,20 @@ func finish_game(success: bool) -> void:
 	is_finished = true
 
 	if success:
-		print("Tea mini game success.")
+		result_label.text = win_text
 	else:
-		print("Tea mini game failed.")
+		result_label.text = lose_text
 
-	await get_tree().create_timer(close_delay).timeout
+	black_screen.visible = true
+	black_screen.modulate.a = 0.0
 
-	if scene_after_close != "":
-		get_tree().change_scene_to_file(scene_after_close)
-	else:
-		queue_free()
+	var tween = create_tween()
+	tween.tween_property(black_screen, "modulate:a", 1.0, result_fade_time)
+
+	await tween.finished
+
+	result_label.visible = true
+
+	await get_tree().create_timer(result_show_time).timeout
+
+	queue_free()

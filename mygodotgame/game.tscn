@@ -32,4 +32,5 @@ hide_move_down = 50.0
 animation_time = 0.4
 
 [node name="TeaMiniGame" parent="." unique_id=83147994 instance=ExtResource("5_7jktm")]
+visible = false
 pouring_speed = 300.0
