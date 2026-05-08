@@ -1,3 +1,5 @@
+Git & README - https://github.com/yaroslavprotsenko/GotodAssigment
+
 itch - https://protzz.itch.io/asigment
 
 password: 1234
